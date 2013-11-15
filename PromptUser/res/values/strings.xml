@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="confirm">Confirm</string>
+    <string name="wipe_tip">The machine has a serious error, need to restore factory to repair,this action will clean the user data</string>
+    <string name="reboot_tip">The machine has a serious error, need reboot to repair</string>
+    <string name="restore_system_tip">The machine system partition is damaged, need reboot to repair</string>
+</resources>

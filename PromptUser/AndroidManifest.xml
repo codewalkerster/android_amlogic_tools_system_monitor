@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.amlogic.promptuser"
+	android:sharedUserId="android.uid.system">
+
+    <uses-permission android:name="android.permission.MASTER_CLEAR" />
+    <uses-permission android:name="android.permission.REBOOT" />
+
+    <application>
+	<activity android:name="BootActivity"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:excludeFromRecents="true">
+            <intent-filter android:priority="2">
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="WipeConfirmActivity"
+		android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+	<activity android:name="RebootActivity"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>    
+	<activity android:name="RestoreSystemActivity"
+                android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>    
+    </application>
+</manifest>
+
