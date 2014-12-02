@@ -1,4 +1,4 @@
-package com.amlogic.promptuser;
+package com.droidlogic.promptuser;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -9,9 +9,10 @@ import android.view.View;
 import android.os.SystemProperties;
 import android.util.Log;
 import android.content.Intent;
+import android.os.PowerManager;
 
-public class WipeConfirmActivity extends Activity {
-    final static String TAG = "WipeConfirmActivity";
+public class RebootActivity extends Activity {
+    final static String TAG = "RbootActivity";
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -19,19 +20,19 @@ public class WipeConfirmActivity extends Activity {
 
 	Log.i( TAG, "onCreate" );
 	
-	setContentView(R.layout.wipe_data_activity);
+	setContentView(R.layout.reboot_activity);
 
 	findViewById(R.id.confirm_btn).setOnClickListener(new View.OnClickListener() {
          	public void onClick(View v) {
- 			wipeData();
-			//finish();
+ 			reboot();
          	}
      		});
     }
 
-    private void wipeData() {
-	Log.i( TAG, "MASTER_CLEAR" );
-        sendBroadcast(new Intent("android.intent.action.MASTER_CLEAR"));
+    private void reboot() {
+	Log.i( TAG, "reboot" );
+   	PowerManager pm=(PowerManager) getSystemService(POWER_SERVICE);  
+	pm.reboot("");  
     }
 }
 

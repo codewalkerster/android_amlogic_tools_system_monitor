@@ -1,4 +1,4 @@
-package com.amlogic.promptuser;
+package com.droidlogic.promptuser;
 
 import android.app.Activity;
 import android.content.ComponentName;
