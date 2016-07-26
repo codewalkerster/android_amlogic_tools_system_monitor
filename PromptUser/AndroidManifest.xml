@@ -33,14 +33,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
-        <receiver android:name=".DigReceiver">
-            <intent-filter>
-                <action android:name="com.droidlogic.dig.DATA_CRASH" />
-                <action android:name="com.droidlogic.dig.DATA_READ_ONLY" />
-                <action android:name="com.droidlogic.dig.SYSTEM_CHANGED" />
-            </intent-filter>
-        </receiver>
+        </activity>    
     </application>
 </manifest>
 
